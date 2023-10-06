@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso</title>
+</head>
+
+<body>
+    <div id="pessoa1">
+        <p>Pessoa 1:</p>
+    </div>
+    <div id="pessoa2">
+        <p>Pessoa 2:</p>
+    </div>
+    <div id="pessoa3">
+        <p>Pessoa 3:</p>
+    </div>
+    <div id="decrescente">
+        <p>peso em ordem decrescente</p>
+    </div>
+    <script>
+        let nome1 = prompt("digite seu nome");
+        let p1 = Number(prompt("digite seu peso"));
+        let nome2 = prompt("digite seu nome");
+        let p2 = Number(prompt("digite seu peso"));
+        let nome3 = prompt("digite seu nome");
+        let p3 = Number(prompt("digite seu peso"));
+        let retorno;
+        switch (true) {
+
+            case p1 >= p2 && p2 >= p3:
+                retorno = nome1 + " pesa " + p1 + "kg e é mais pesado que " + nome2 + " que pesa " + p2 +
+                    "kg </br>" + "e " + nome2 + " que pesa " + p2 + "kg é mais pesado que " +
+                    nome3 + " que pesa " + p3 + "kg" + "</br>" + "</br>" + "3º peso: " + p1 + "kg" +
+                    "</br>" + "2º peso: " + p2 + "kg" + "</br>" + "1º peso: " + p3 + "kg" + "</br>";
+                break;
+            case p1 >= p3 && p3 >= p2:
+                retorno = nome1 + " pesa " + p1 + "kg e é mais pesado que " + nome3 + " que pesa " + p3 +
+                    "kg </br>" + "e " + nome3 + " que pesa " + p3 + "kg é mais pesado que " +
+                    nome2 + " que pesa " + p2 + "kg" + "</br>" + "</br>" + "3º peso: " + p1 + "kg" +
+                    "</br>" + "2º peso: " + p3 + "kg" + "</br>" + "1º peso: " + p2 + "kg" + "</br>";
+                break;
+            case p2 >= p1 && p1 >= p3:
+                retorno = nome2 + " pesa " + p2 + "kg e é mais pesado que " + nome1 + " que pesa " + p1 +
+                    "kg </br>" + "e " + nome1 + " que pesa " + p1 + "kg é mais pesado que " +
+                    nome3 + " que pesa " + p3 + "kg" + "</br>" + "</br>" + "3º peso: " + p2 + "kg" +
+                    "</br>" + "2º peso: " + p1 + "kg" + "</br>" + "1º peso: " + p3 + "kg" + "</br>";
+                break;
+            case p2 >= p3 && p3 >= p1:
+                retorno = nome2 + " pesa " + p2 + "kg e é mais pesado que " + nome3 + " que pesa " + p3 +
+                    "kg </br>" + "e " + nome3 + " que pesa " + p3 + "kg é mais pesado que " +
+                    nome1 + " que pesa " + p1 + "kg" + "</br>" + "</br>" + "3º peso: " + p2 + "kg" +
+                    "</br>" + "2º peso: " + p3 + "kg" + "</br>" + "1º peso: " + p1 + "kg" + "</br>";
+                break;
+            case p3 >= p2 && p2 >= p1:
+                retorno = nome3 + " pesa " + p3 + "kg e é mais pesado que " + nome2 + " que pesa " + p2 +
+                    "kg </br>" + "e " + nome2 + " que pesa " + p2 + "kg é mais pesado que " +
+                    nome1 + " que pesa " + p1 + "kg" + "</br>" + "</br>" + "3º peso: " + p3 + "kg" +
+                    "</br>" + "2º peso: " + p2 + "kg" + "</br>" + "1º peso: " + p1 + "kg" + "</br>";
+                break;
+            case p3 >= p1 && p1 >= p2:
+                retorno = nome3 + " pesa " + p3 + "kg e é mais pesado que " + nome1 + " que pesa " + p1 +
+                    "kg </br>" + "e " + nome1 + " que pesa " + p1 + "kg é mais pesado que " +
+                    nome2 + " que pesa " + p2 + "kg" + "</br>" + "</br>" + "3º peso: " + p3 + "kg" +
+                    "</br>" + "2º peso: " + p1 + "kg" + "</br>" + "1º peso: " + p2 + "kg" + "</br>";
+                break;
+            default:
+                retorno = "Nomes e Pesos Desconhecidos";
+                break;
+
+        }
+
+        document.getElementById("pessoa1").innerHTML = nome1 + " o peso dessa pessoa é de " + p1 + "kg"
+
+        document.getElementById("pessoa2").innerHTML = nome2 + " o peso dessa pessoa é de " + p2 + "kg"
+
+        document.getElementById("pessoa3").innerHTML = nome3 + " o peso dessa pessoa é de " + p3 + "kg"
+
+        document.getElementById("decrescente").innerHTML = retorno
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fast food</title>
+</head>
+<body bgcolor="gray"><center>
+<font size="9" id="retorno">  </font><br><br>
+<img src="cardapio.png" alt=""><br><br>
+<button id="pedido" onclick="oi()"> <h1> fazer pedido </h1></button>
+<script>
+    function oi(){
+    let EscolhaPedido=Number(prompt("Digite um número de 1 a 3 para decidir seu pedido no cardápio")) ;
+    let retorno = ''
+    switch (EscolhaPedido) {
+        case 1:
+            retorno = "Seu pedido é Big Super Sanduba: </br></br> 2 hambúrgueres </br> queijo </br> batata frita </br> e refrigerante. </br></br>Tudo isso custa: R$ 5,00"  
+            break;
+            case 2:
+            retorno = "Seu pedido é Quase Super Sanduba: </br></br> 1 hambúrguer </br> batata frita </br> e refrigerante. </br></br>Tudo isso custa: R$ 3,00"  
+            break;
+            case 3:
+            retorno = "Seu pedido é Mirradus Sanduba: </br></br> 1 Misto quente </br> e refrigerante. </br></br>Tudo isso custa: R$ 1,50" 
+            break;
+        default:
+        retorno = "Este número não está no cardápio"
+            break;
+    }
+    document.getElementById("retorno").innerHTML = retorno;
+    }
+</script>      
+</center>
+</body>
+</html>

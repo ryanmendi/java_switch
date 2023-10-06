@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+</head>
+
+<body>
+    <p>Nome Funcionário:
+    <div id="funcionario"></div>
+    </p>
+    <p>Produtos:
+    <div id="prodt"></div>
+    </p>
+    <p>Comissão:
+    <div id="comit"></div>
+    </p>
+    <script>
+        let nome = prompt("Digite o nome do funcionário");
+        let Produto = Number(prompt("digite o número de produtos"));
+        let Comissao;
+
+        switch (true) {
+            case Produto <= 250:
+                Comissao = Produto * 1.0;
+                break;
+            case Produto <= 500:
+                Comissao = Produto * 1.5;
+                break;
+            default:
+                Comissao = Produto * 2.0;
+                break;
+        }
+        document.getElementById("funcionario").innerHTML = nome
+        document.getElementById("prodt").innerHTML = Produto
+        document.getElementById("comit").innerHTML = Comissao
+    </script>
+</body>
+
+</html>

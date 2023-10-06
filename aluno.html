@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificar como está o aluno</title>
+</head>
+
+<body>
+    <div id="nota">
+        <script>
+            let nome = prompt("digite seu nome");
+            let n1 = Number(prompt("digite a primeira nota"));
+            let n2 = Number(prompt("digite a segunda nota"));
+            let n3 = Number(prompt("digite a terceira nota"));
+            let media = (n1 + n2 + n3) / 3;
+            let result;
+            switch (true) {
+                case media >= 6.0:
+                    result = "foi aprovado"
+                    break;
+                case media <= 6.0:
+                    result = "foi reprovado"
+                default:
+                    result = "error!!"
+                    break;
+            }
+            var notasordenadas = [n1, n2, n3];
+            notasordenadas.sort(function (a, b) {
+                return b - a;
+            });
+            alert(" notas em ordem decrescentes: " + notasordenadas.join(","));
+            document.getElementById("nota").innerHTML = " o aluno " + nome + result + " com a média de: " + media;
+        </script>
+    </div>
+</body>
+
+</html>
